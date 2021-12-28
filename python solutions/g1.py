@@ -1,8 +1,10 @@
 n = int(input())
+import math
 for _ in range(n):
     l = float(input())
-    w = (l/10.0)*6
+    w = (l*6)/10
     r = (l/5.0)
     ta = l*w
-    ca = 3.142*r*r
-    print(f"{ca:.2f} {(ta-ca):.2f}")
+    pi = math.acos(-1)
+    ca = pi*r*r
+    print("{} {}".format(round(ca,2), round((ta-ca),2)))
